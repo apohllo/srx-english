@@ -54,7 +54,7 @@ module SRX
         sentence = ""
         before_buffer = ""
         @input.pos = 0
-        after_buffer = buffer_length.times.map{|i| @input.readchar}.join("")
+        after_buffer = buffer_length.times.map{|i| @input.getc }.join("")
         matched_rule = nil
         while(!@input.eof?) do
           matched_before = BEFORE_RE.match(before_buffer)
