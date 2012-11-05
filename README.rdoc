@@ -41,7 +41,7 @@ over the matched sentences:
 
   sentence = 'My home is my castle.'
   splitter = SRX::English::WordSplitter.new(sentence)
-  splitter.each do |word,type|
+  splitter.each do |word,type,start_offset,end_offset|
     puts "'#{word}' #{type}"
   end
   # 'My' word 

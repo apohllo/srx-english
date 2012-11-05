@@ -1,2 +1,6 @@
+0.1.2
+- Word splitter reports positions of the word
+0.1.1
+- Use getc instead of readchar
 0.1.0
 - First release of sentence segmentation rules for English

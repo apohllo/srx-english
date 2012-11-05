@@ -38,16 +38,18 @@ module SRX
       def each
         raise "Invalid argument - sentence is nil" if @sentence.nil?
         @sentence.scan(SPLIT_RE) do |word,number,punct,graph,other|
+          start_offset = $~.begin(0)
+          end_offset = $~.end(0)-1
           if !word.nil?
-            yield word, :word
+            yield word, :word, start_offset, end_offset
           elsif !number.nil?
-            yield number, :number
+            yield number, :number, start_offset, end_offset
           elsif !punct.nil?
-            yield punct, :punct
+            yield punct, :punct, start_offset, end_offset
           elsif !graph.nil?
-            yield graph, :graph
+            yield graph, :graph, start_offset, end_offset
           else
-            yield other, :other
+            yield other, :other, start_offset, end_offset
           end
         end
       end

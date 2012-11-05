@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "srx-english"
-  s.version     = "0.1.0"
+  s.version     = "0.1.2"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Aleksander Pohl"]
   s.email       = ["apohllo@o2.pl"]
